@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 90px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #009999;
+}
+
+.logo i {
+    font-size: 38px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #666;
+    padding-bottom: 15px;
+}
+
+.nav-links a.active {
+    color: #009999;
+    border-bottom: 4px solid #00cfcf;
+}
+
+/* HERO */
+
+.hero {
+    height: 300px;
+    background: url("images/fabio-sasso-47jg43fjQZ8-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    width: 500px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    width: 110px;
+    border: none;
+    background: #009999;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* LATEST SECTION */
+
+.latest-section {
+    padding: 70px 40px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 48px;
+    font-weight: 300;
+    color: #009999;
+}
+
+.page-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-count input {
+    width: 55px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.page-count span {
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+    background: white;
+}
+
+/* GALLERY */
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 24px;
+}
+
+.card {
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    font-size: 18px;
+    color: #999;
+}
+
+/* PAGINATION */
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.pagination {
+    display: flex;
+    gap: 20px;
+}
+
+.pagination a {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #f2f2f2;
+    color: #999;
+    font-size: 22px;
+}
+
+.pagination a:hover,
+.pagination .active-page {
+    background: #009999;
+    color: white;
+}
+
+.btn-page {
+    width: 180px;
+    height: 65px;
+    background: #009999;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+/* ===== FOOTER ===== */
+
+.catalog-footer {
+    background: #ececec;
+    padding: 70px 0;
+    margin-top: 120px;
+}
+
+
+.catalog-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.catalog-footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.catalog-footer-bottom {
+    max-width: 1200px;
+    margin: 70px auto 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-footer-bottom p {
+    margin: 0;
+    color: #777;
+    font-size: 17px;
+}
+
+.catalog-footer-bottom a {
+    text-decoration: none;
+    color: #777;
+}
+
+.catalog-footer-bottom a:hover {
+    color: #009999;
+}
+
+.catalog-footer-about {
+    width: 42%;
+}
+
+.catalog-footer-about a,
+.catalog-footer-about a:hover {
+    text-decoration: none;
+}
+
+.catalog-footer-about h3,
+.catalog-footer-links h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #009999;
+    margin-bottom: 30px;
+}
+
+.catalog-footer-about p {
+    font-size: 17px;
+    line-height: 2;
+    color: #777;
+}
+
+.catalog-footer-links {
+    width: 18%;
+}
+
+.catalog-footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.catalog-footer-links li {
+    margin-bottom: 18px;
+}
+
+.catalog-footer-links a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #777;
+    transition: 0.3s;
+}
+
+.catalog-footer-links a:hover {
+    color: #009999;
+}
+
+.catalog-footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+}
+
+.catalog-social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.catalog-social-icons a {
+    width: 46px;
+    height: 46px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #999;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.catalog-social-icons a:hover {
+    background: #009999;
+    color: #fff;
+}
+
+.catalog-footer-policy {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 50px;
+}
+
+.catalog-footer-policy a {
+    text-decoration: none;
+    font-size: 17px;
+    color: #777;
+    transition: 0.3s;
+}
+
+.catalog-footer-policy a:hover {
+    color: #009999;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px) {
+
+    .card {
+        width: 45%;
+    }
+
+}
+
+@media(max-width:992px) {
+
+    .catalog-footer-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .catalog-footer-about,
+    .catalog-footer-links {
+        width: 100%;
+    }
+
+    .catalog-footer-right {
+        height: auto;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .search-box {
+        width: 90%;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .section-header h2 {
+        font-size: 36px;
+    }
+
+    .catalog-footer {
+        padding: 50px 25px;
+    }
+
+    .catalog-social-icons {
+        flex-wrap: wrap;
+    }
+
+}
