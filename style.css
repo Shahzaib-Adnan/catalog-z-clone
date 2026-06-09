@@ -36,6 +36,8 @@ body {
     font-weight: 400;
 }
 
+/* NAV LINKS (FIXED + ANIMATED) */
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -46,12 +48,39 @@ body {
     text-decoration: none;
     font-size: 18px;
     color: #666;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    transition: 0.3s;
 }
 
+/* underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: #00cfcf;
+    transition: 0.3s;
+}
+
+/* hover */
+.nav-links a:hover {
+    color: #009999;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* active page */
 .nav-links a.active {
     color: #009999;
-    border-bottom: 4px solid #00cfcf;
+}
+
+.nav-links a.active::after {
+    width: 100%;
 }
 
 /* HERO */
@@ -68,7 +97,8 @@ body {
 
 .search-box {
     display: flex;
-    width: 500px;
+    max-width: 500px;
+    width: 90%;
 }
 
 .search-box input {
@@ -121,25 +151,12 @@ body {
     font-size: 16px;
 }
 
-.page-count span {
-    padding: 10px 16px;
-    border: 1px solid #ccc;
-    margin: 0 10px;
-    background: white;
-}
-
-/* GALLERY */
-
 /* GALLERY */
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px 24px;
-}
-
-.card {
-    width: 100%;
 }
 
 .card img {
@@ -201,14 +218,13 @@ body {
     font-size: 22px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 
 .catalog-footer {
     background: #ececec;
     padding: 70px 0;
     margin-top: 120px;
 }
-
 
 .catalog-footer-container {
     max-width: 1200px;
@@ -219,43 +235,12 @@ body {
     flex-wrap: wrap;
 }
 
-.catalog-footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.catalog-footer-bottom {
-    max-width: 1200px;
-    margin: 70px auto 0 auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.catalog-footer-bottom p {
-    margin: 0;
-    color: #777;
-    font-size: 17px;
-}
-
-.catalog-footer-bottom a {
-    text-decoration: none;
-    color: #777;
-}
-
-.catalog-footer-bottom a:hover {
-    color: #009999;
-}
-
 .catalog-footer-about {
     width: 42%;
 }
 
-.catalog-footer-about a,
-.catalog-footer-about a:hover {
-    text-decoration: none;
+.catalog-footer-links {
+    width: 18%;
 }
 
 .catalog-footer-about h3,
@@ -272,13 +257,8 @@ body {
     color: #777;
 }
 
-.catalog-footer-links {
-    width: 18%;
-}
-
 .catalog-footer-links ul {
     list-style: none;
-    padding: 0;
 }
 
 .catalog-footer-links li {
@@ -289,16 +269,18 @@ body {
     text-decoration: none;
     font-size: 17px;
     color: #777;
-    transition: 0.3s;
 }
 
 .catalog-footer-links a:hover {
     color: #009999;
 }
 
+/* RIGHT FOOTER */
+
 .catalog-footer-right {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     justify-content: space-between;
     height: 220px;
 }
@@ -318,7 +300,6 @@ body {
     text-decoration: none;
     color: #999;
     font-size: 18px;
-    transition: 0.3s;
 }
 
 .catalog-social-icons a:hover {
@@ -337,24 +318,43 @@ body {
     text-decoration: none;
     font-size: 17px;
     color: #777;
-    transition: 0.3s;
 }
 
 .catalog-footer-policy a:hover {
     color: #009999;
 }
 
-/* RESPONSIVE */
+/* FOOTER BOTTOM */
 
-@media(max-width:1200px) {
-
-    .card {
-        width: 45%;
-    }
-
+.catalog-footer-bottom {
+    max-width: 1200px;
+    margin: 70px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.catalog-footer-bottom p {
+    color: #777;
+    font-size: 17px;
+}
+
+.catalog-footer-bottom a {
+    text-decoration: none;
+    color: #777;
+}
+
+.catalog-footer-bottom a:hover {
+    color: #009999;
+}
+
+/* RESPONSIVE */
+
 @media(max-width:992px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .catalog-footer-container {
         flex-direction: column;
@@ -369,10 +369,13 @@ body {
     .catalog-footer-right {
         height: auto;
     }
-
 }
 
 @media(max-width:768px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 
     .navbar {
         flex-direction: column;
@@ -383,19 +386,12 @@ body {
 
     .nav-links {
         gap: 20px;
-    }
-
-    .search-box {
-        width: 90%;
+        flex-wrap: wrap;
     }
 
     .section-header {
         flex-direction: column;
         gap: 20px;
-    }
-
-    .card {
-        width: 100%;
     }
 
     .section-header h2 {
@@ -409,5 +405,4 @@ body {
     .catalog-social-icons {
         flex-wrap: wrap;
     }
-
 }
